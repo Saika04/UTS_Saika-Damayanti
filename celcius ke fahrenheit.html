@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Suhu Celcius Ke Fahrenheit</title>
+</head>
+<body>
+    <h2>Temperature Converter</h2>
+<p>Type a value in the Celcius field to convert the value to Fahrenheit:</p>
+
+<p>
+  <label>Celcius</label>
+  <input id="inputCelcius" type="number" placeholder="Celcius" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+<p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+
+<script>
+function temperatureConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputFahrenheit").innerHTML=(valNum-32)/1.8;
+}
+</script>
+</body>
+</html>
